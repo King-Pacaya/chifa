@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventario</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="../../multimedia/favicon.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../menu.css">
+  <link rel="stylesheet" type="text/css" href="inventario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Oswald&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Botón para abrir/cerrar el menú -->
+  <button id="menu-toggle-button" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Menú -->
+  <div id="menu" class="menu">
+    <ul>
+      <li><a href="../mesas/mesas.html" id="menu-subpagina1">Mesas</a></li>
+      <li><a href="../menu/menu.html" id="menu-subpagina2">Menú</a></li>
+      <li><a href="inventario.html" id="menu-subpagina3">Inventario</a></li>
+      <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
+      <li><a href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
+      <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
+      <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+      <div id="mode-options">
+        <button id="mode-button" onclick="toggleMode()">Modo Claro</button>
+      </div>
+    </ul>
+  </div>
+
+
+  <h1>Inventario</h1>
+  <div id="inventory">
+    <div class="tabs">
+      <button class="tab-link active" onclick="changeTab(event, 'insumos')">Insumos</button>
+      <button class="tab-link" onclick="changeTab(event, 'utensilios')">Utensilios</button>
+      <button class="tab-link" onclick="changeTab(event, 'bebidas')">Bebidas</button>
+      <button class="tab-link" onclick="changeTab(event, 'perdidas')">Pérdidas</button>
+      <button class="tab-link" onclick="changeTab(event, 'extras')">Extras</button>
+    </div>
+    
+    <div class="tab-content">
+      <div id="insumos" class="tab">
+        <h3>Insumos</h3>
+        <form class="form-producto" data-category="insumos">
+          <input type="text" class="nombre-producto" placeholder="Nombre" required>
+          <input type="number" class="cantidad-producto" placeholder="Cantidad" value="" required>
+          <label>
+            <p>Agrega una imagen</p>
+            <input type="file" class="imagen-producto" accept="image/*">
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+        <ul class="lista-productos"></ul>
+      </div>
+      
+      <div id="utensilios" class="tab">
+        <h3>Utensilios</h3>
+        <form class="form-producto" data-category="utensilios">
+          <input type="text" class="nombre-producto" placeholder="Nombre" required>
+          <input type="number" class="cantidad-producto" placeholder="Cantidad" value="" required>
+          <label>
+            <p>Agrega una imagen</p>
+            <input type="file" class="imagen-producto" accept="image/*">
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+        <ul class="lista-productos"></ul>
+      </div>
+      
+      <div id="bebidas" class="tab">
+        <h3>Bebidas</h3>
+        <form class="form-producto" data-category="bebidas">
+          <input type="text" class="nombre-producto" placeholder="Nombre" required>
+          <input type="number" class="cantidad-producto" placeholder="Cantidad" value="" required>
+          <label>
+            <p>Agrega una imagen</p>
+            <input type="file" class="imagen-producto" accept="image/*">
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+        <ul class="lista-productos"></ul>
+      </div>
+      
+      <div id="perdidas" class="tab">
+        <h3>Pérdidas</h3>
+        <form class="form-producto" data-category="perdidas">
+          <input type="text" class="nombre-producto" placeholder="Nombre" required>
+          <input type="number" class="cantidad-producto" placeholder="Cantidad" value="" required>
+          <label>
+            <p>Agrega una imagen</p>
+            <input type="file" class="imagen-producto" accept="image/*">
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+        <ul class="lista-productos"></ul>
+      </div>
+      
+      <div id="extras" class="tab">
+        <h3>Extras</h3>
+        <form class="form-producto" data-category="extras">
+          <input type="text" class="nombre-producto" placeholder="Nombre" required>
+          <input type="number" class="cantidad-producto" placeholder="Cantidad" value="" required>
+          <label>
+            <p>Agrega una imagen</p>
+            <input type="file" class="imagen-producto" accept="image/*">
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+        <ul class="lista-productos"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="inventario.js"></script>
+  <script src="../validacion.js"></script>
+  <script src="../menu.js"></script>
+  <script src="../mode.js"></script>
+</body>
+</html>

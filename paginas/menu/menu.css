@@ -1,0 +1,222 @@
+body {
+font-family: "DM Sans", "sans-serif";
+transition: 0.3s ease;
+}
+body::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
+
+
+h1 {
+position: relative;
+width: 100%;
+text-align: center;
+}
+
+form {
+position: relative;
+border: solid black 2px;
+width: 50%;
+margin: 5vh auto;
+padding: 2vh 2vw;
+flex-direction: column;
+border-radius: 15px;
+}
+	form label {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2vh;
+	font-weight: bold;
+	font-size: 20px;
+	}
+	form input {
+	display: block;
+	width: calc(100%/2.3);
+	margin: 5vh 1vw;
+	padding: 0.5vh 0;
+	outline: none;
+	border: none;
+	border-bottom: solid black 2px;	
+	float: left;
+	background-color: transparent;
+	font-family: "DM Sans", "sans-serif";
+	}
+	form button {
+	display: block;
+	width: 100%;
+	font-family: "DM Sans", "sans-serif";
+	font-weight: bold;
+	margin: 1vh auto;
+	padding: 2vh 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	}
+
+.div {
+position: relative;
+width: 50%;
+float: left;
+margin: 2vh 0;
+}
+	.div p {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	text-transform: uppercase;
+	}
+	.imgqr {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+		.imgqr img {
+		height: 80%;
+		width: auto;
+		}
+
+table {
+border: solid black 2px;
+width: 90%;
+margin: 0 auto;
+border-radius: 15px;
+}
+	table th {
+	padding: 2.5vh 0;
+	}
+	table td {
+	text-transform: capitalize;
+	text-align: center;
+	}
+	table button {
+	display: block;
+	width: 80%;
+	font-family: "DM Sans", "sans-serif";
+	font-weight: bold;
+	margin: 1vh auto;
+	padding: 1.5vh 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	}
+
+/*****************************************Modo Oscuro*****************************************/
+body.dark-mode {
+font-family: "DM Sans", "sans-serif";
+background-color: black;
+transition: 0.3s ease;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 15px;
+}
+
+body.dark-mode h1 {
+position: relative;
+width: 100%;
+text-align: center;
+color: white;
+}
+
+body.dark-mode form {
+position: relative;
+border: solid white 2px;
+width: 50%;
+margin: 5vh auto;
+padding: 2vh 2vw;
+flex-direction: column;
+border-radius: 15px;
+}
+	body.dark-mode form label {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2vh;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	}
+	body.dark-mode form input {
+	display: block;
+	width: calc(100%/2.3);
+	margin: 5vh 1vw;
+	padding: 0.5vh 0;
+	outline: none;
+	border: none;
+	border-bottom: solid white 2px;
+	float: left;
+	font-family: "DM Sans", "sans-serif";
+	color: white;
+	}
+	body.dark-mode form button {
+	display: block;
+	width: 100%;
+	font-family: "DM Sans", "sans-serif";
+	font-weight: bold;
+	margin: 1vh auto;
+	padding: 2vh 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	}
+
+	body.dark-mode .div p {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	text-transform: uppercase;
+	color: white;
+	}
+
+body.dark-mode table {
+border: solid white 2px;
+width: 90%;
+margin: 0 auto;
+border-radius: 15px;
+}
+	body.dark-mode table th {
+	padding: 2.5vh 0;
+	color: white;
+	}
+	body.dark-mode table td {
+	text-transform: capitalize;
+	text-align: center;
+	color: white;
+	}
+	body.dark-mode table button {
+	display: block;
+	width: 80%;
+	font-family: "DM Sans", "sans-serif";
+	font-weight: bold;
+	margin: 1vh auto;
+	padding: 1.5vh 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	}
+
+		body.dark-mode .imgqr img {
+		height: 80%;
+		width: auto;
+		filter: invert(100%);
+		}

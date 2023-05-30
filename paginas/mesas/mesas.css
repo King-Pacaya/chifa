@@ -1,0 +1,492 @@
+body {
+background-color: white;
+transition: 0.3s ease;
+}
+
+#nuevo-plato-form, #platos-agregados-list, .tablem {
+display: none;
+}
+.mesa-container {
+position: relative;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.mesa {
+width: calc(100%/3.5);
+margin: 2vh 0;
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+border: solid green 2px;
+border-radius: 15px;
+}
+  .mesa-title {
+  margin: 0;
+  font-size: 25px;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5vh 0;
+  }
+  .mesa.has-pedido {
+  border: solid red 2px;
+  }
+  .mesa.no-pedido {
+  border: solid green 2px;
+  }
+  .mesa button {
+  border: none;
+  width: 60%;
+  margin: 1.5vh auto;
+  padding: 1.5vh;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: bold;
+  }
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+position: relative;
+width: 80%;
+height: 80vh;
+overflow: auto;
+background-color: #fefefe;
+margin: 3% auto;
+padding: 20px;
+border-radius: 15px;
+font-family: "DM Sans", "sans-serif";
+}
+
+.modal-content::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
+
+.modal-title {
+position: relative;
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+}
+
+.modal-input, .modal-button{
+position: relative;
+margin: 2vh 0;
+width: calc(100%/2);
+float: left;
+
+}
+  .modal-input label {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1vh 0;
+  font-weight: bold;
+
+  }
+  .modal-input input {
+  position: relative;
+  width: 50%;
+  border: none;
+  border-bottom: black 2px solid;
+  font-family: "DM Sans", "sans-serif";
+  outline: none;
+  background-color: transparent;
+  }
+  .modal-input select {
+  position: relative;
+  font-family: "DM Sans", "sans-serif";
+  border: solid black 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  text-transform: capitalize;
+  }
+  .modal-input option {
+  position: relative;
+  font-family: "DM Sans", "sans-serif";
+  text-transform: capitalize;
+  }
+  .modal-input button {
+  position: relative;
+  border: solid blue 2px;
+  margin: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+  padding: 1vh 3vw;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  }
+
+  .modal-button button {
+  border: none;
+  width: calc(100%/2.5);
+  padding: 1vh 2vw;
+  margin: 1.3vh 1.5vw;
+  border-radius: 10px;
+  float: left;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  }
+    .pedido-table {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+      border: solid black 2px;
+      border-radius: 15px;
+    }
+
+    .pedido-table th,
+    .pedido-table td {
+      width: calc(100%/3);
+      padding: 1vh 0;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .pedido-table td:nth-child(4) {
+    display: none;
+    }
+    .pedido-total {
+      font-weight: bold;
+      text-align: right;
+    }
+/****************************************Modo Oscuro****************************************/
+body.dark-mode {
+background-color: black;
+transition: 0.3s ease;
+}
+
+  body.dark-mode .mesa-title {
+  margin: 0;
+  font-size: 25px;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5vh 0;
+  color: #fff;
+  }
+
+body.dark-mode .modal-content {
+position: relative;
+width: 80%;
+height: 80vh;
+overflow: auto;
+background-color: #fefefe;
+margin: 3% auto;
+padding: 20px;
+border-radius: 15px;
+font-family: "DM Sans", "sans-serif";
+background-color: black;
+border: solid white 2px;
+}
+
+body.dark-mode .modal-content::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 15px;
+}
+
+body.dark-mode .modal-title {
+position: relative;
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+color: white;
+}
+  body.dark-mode .mesa button {
+  border: none;
+  width: 60%;
+  margin: 1.5vh auto;
+  padding: 1.5vh;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-weight: bold;
+  }
+
+  body.dark-mode .modal-input label {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1vh 0;
+  font-weight: bold;
+  color: white;
+  }
+  body.dark-mode .modal-input input {
+  position: relative;
+  width: 50%;
+  border: none;
+  border-bottom: white 2px solid;
+  font-family: "DM Sans", "sans-serif";
+  outline: none;
+  background-color: transparent;
+  color: white;
+  }
+  body.dark-mode .modal-input button {
+  position: relative;
+  border: solid blue 2px;
+  margin: 1vh 1vw;
+  border: none;
+  border-radius: 10px;
+  padding: 1vh 3vw;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  }
+
+  body.dark-mode .modal-button button {
+  border: none;
+  width: calc(100%/2.5);
+  padding: 1vh 2vw;
+  margin: 1.3vh 1.5vw;
+  border-radius: 10px;
+  float: left;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  }
+  body.dark-mode .modal-input select {
+  position: relative;
+  font-family: "DM Sans", "sans-serif";
+  border: solid black 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: black;
+  }
+
+    body.dark-mode .pedido-table {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    border: solid white 2px;
+    border-radius: 15px;
+    color: white;
+    }
+
+    body.dark-mode .pedido-total {
+    font-weight: bold;
+    text-align: right;
+    color: white;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nuevo-plato-form {
+position: relative;
+border: solid black 2px;
+width: 50%;
+margin: 5vh auto;
+padding: 2vh 2vw;
+flex-direction: column;
+border-radius: 15px;
+}
+  #nuevo-plato-form label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2vh;
+  font-weight: bold;
+  font-size: 20px;
+  }
+  #nuevo-plato-form input {
+  display: block;
+  width: calc(100%/2.3);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border-bottom: solid black 2px; 
+  float: left;
+  background-color: transparent;
+  font-family: "DM Sans", "sans-serif";
+  }
+  #nuevo-plato-form button {
+  display: block;
+  width: 100%;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  margin: 1vh auto;
+  padding: 2vh 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  }
+
+.tablem {
+border: solid black 2px;
+width: 90%;
+margin: 0 auto;
+border-radius: 15px;
+}
+  .tablem th {
+  padding: 2.5vh 0;
+  font-family: "DM Sans", "sans-serif";
+  }
+  .tablem td {
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "DM Sans", "sans-serif";
+  }
+  .tablem button {
+  display: block;
+  width: 80%;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  margin: 1vh auto;
+  padding: 1.5vh 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  }
+
+
+body.dark-mode #nuevo-plato-form {
+position: relative;
+border: solid white 2px;
+width: 50%;
+margin: 5vh auto;
+padding: 2vh 2vw;
+flex-direction: column;
+border-radius: 15px;
+}
+  body.dark-mode #nuevo-plato-form label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2vh;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  }
+  body.dark-mode #nuevo-plato-form input {
+  display: block;
+  width: calc(100%/2.3);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border-bottom: solid white 2px;
+  float: left;
+  font-family: "DM Sans", "sans-serif";
+  color: white;
+  }
+  body.dark-mode #nuevo-plato-form button {
+  display: block;
+  width: 100%;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  margin: 1vh auto;
+  padding: 2vh 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  }
+
+body.dark-mode .tablem {
+border: solid white 2px;
+width: 90%;
+margin: 0 auto;
+border-radius: 15px;
+}
+  body.dark-mode .tablem th {
+  padding: 2.5vh 0;
+  color: white;
+  font-family: "DM Sans", "sans-serif";
+  }
+  body.dark-mode .tablem td {
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+  font-family: "DM Sans", "sans-serif";
+  }
+  body.dark-mode .tablem button {
+  display: block;
+  width: 80%;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: bold;
+  margin: 1vh auto;
+  padding: 1.5vh 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  }

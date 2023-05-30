@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" href="../../multimedia/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../menu.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Oswald&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Botón para abrir/cerrar el menú -->
+  <button id="menu-toggle-button" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Menú -->
+  <div id="menu" class="menu">
+    <ul>
+      <li><a href="../mesas/mesas.html" id="menu-subpagina1">Mesas</a></li>
+      <li><a href="menu.html" id="menu-subpagina2">Menú</a></li>
+      <li><a href="../inventario/inventario.html" id="menu-subpagina3">Inventario</a></li>
+      <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
+      <li><a href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
+      <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
+      <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+      <div id="mode-options">
+        <button id="mode-button" onclick="toggleMode()">Modo Claro</button>
+      </div>
+    </ul>
+  </div>
+
+<h1>Menú</h1>
+
+<form id="nuevo-plato-form">
+  <label>Ingresa un nuevo plato o bebida:</label>
+  <input type="text" id="nombre-plato-input" placeholder="Nombre del plato" required>
+  <input type="number" id="precio-plato-input" placeholder="Precio del plato" required>
+  <button type="submit">Agregar plato</button>
+</form>
+
+<div class="div">
+  <p>Platos</p>
+  <div class="imgqr"><img src="../../multimedia/qr.png"></div>
+  <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+</div>
+
+<div class="div">
+  <p>Platos Agregados</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody id="platos-agregados-list">
+    </tbody>
+  </table>
+</div>
+
+  <script src="menu.js"></script>
+  <script src="../validacion.js"></script>
+  <script src="../menu.js"></script>
+  <script src="../mode.js"></script>
+</body>
+
+</html>

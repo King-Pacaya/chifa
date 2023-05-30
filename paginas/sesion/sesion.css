@@ -1,0 +1,79 @@
+body {
+background-color: white;
+transition: 0.3s ease;
+font-family: "DM Sans", "sans-serif";
+}
+h1 {
+width: 100%;
+text-align: center;
+}
+
+form {
+width: 60%;
+margin: 0 auto;
+}
+form label {
+display: block;
+width: 49%;
+}
+form input {
+display: block;
+width: 49%;
+background-color: transparent;
+border: none;
+margin: 2vh 0;
+outline: none;
+border-bottom: solid black 2px;
+}
+form button {
+display: block;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+border: none;
+width: 80%;
+padding: 1.5vh 0;
+margin: 4vh auto;
+border-radius: 15px;
+font-family: "DM Sans", "sans-serif";
+cursor: pointer;
+}
+
+/****************************************Modo Oscuro****************************************/
+body.dark-mode {
+background-color: black;
+transition: 0.3s ease;
+font-family: "DM Sans", "sans-serif";
+}
+body.dark-mode h1 {
+width: 100%;
+text-align: center;
+color: white;
+}
+
+body.dark-mode form label {
+display: block;
+width: 49%;
+color: white;
+}
+body.dark-mode form input {
+display: block;
+width: 49%;
+background-color: transparent;
+border: none;
+margin: 2vh 0;
+outline: none;
+border-bottom: solid white 2px;
+color: white;
+}
+body.dark-mode form button {
+display: block;
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+border: none;
+width: 80%;
+padding: 1.5vh 0;
+margin: 4vh auto;
+border-radius: 15px;
+font-family: "DM Sans", "sans-serif";
+cursor: pointer;
+}

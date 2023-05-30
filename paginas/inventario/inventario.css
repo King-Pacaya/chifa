@@ -1,0 +1,356 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: white;
+transition: 0.3s ease;
+}
+
+.tab {
+display: none;
+}
+
+h1 {
+position: relative;
+width: 100%;
+text-align: center;
+font-family: "DM Sans", "sans-serif";
+font-weight: bold;
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0;
+}
+
+#inventory {
+position: relative;
+margin: 0;
+height: 90vh;
+overflow: hidden;
+}
+.tabs {
+position: relative;
+display: flex;
+height: 10%;
+}
+.tab-link {
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+height: 100%;
+margin: 0;
+padding: 0;
+border: none;
+width: calc(100%/5);
+cursor: pointer;
+font-family: "DM Sans", "sans-serif";
+}
+.tab-link.active {
+  background-color: green;
+  color: #fff;
+}
+.tab-content {
+overflow: auto;
+height: 90%;
+}
+  .tab-content::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+  }
+  .tab-content::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 15px;
+  }
+
+.tab h3 {
+width: 100%;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+padding: 3vh 0;
+font-family: "DM Sans", "sans-serif";
+}
+
+.tab form {
+padding:  2vh;
+display: flex;
+align-items: center;
+}
+.tab form input {
+background-color: transparent;
+border: none;
+border-bottom: solid black 2px;
+outline: none;
+width: calc(100%/4);
+margin: 0 2vh;
+font-family: "DM Sans", "sans-serif";
+padding: 1vh 0;
+}
+.tab form label {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+padding: 3vh 1vw;
+border: 2px dashed black;
+border-radius: 15px;
+display: inline-block;
+cursor: pointer;
+width: calc(100%/4);
+margin: 0 2vh;
+}
+
+.tab form label p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: "DM Sans", "sans-serif";
+}
+
+.tab form [type=file] {
+position: absolute;
+display: block;
+height: 100%;
+width: 100%;
+opacity: 0;
+text-align: right;
+cursor: pointer;
+}
+
+.tab form button {
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+border: none;
+border-radius: 15px;
+padding: 2vh 0;
+width: calc(100%/4);
+margin: 0 2vh;
+font-family: "DM Sans", "sans-serif";
+cursor: pointer;
+}
+
+.lista-productos {
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.producto {
+position: relative;
+margin: 3vh 0;
+width: calc(100%/4.5);
+border: solid black 2px;
+font-family: "DM Sans", "sans-serif";
+border-radius: 15px;
+}
+  .producto img {
+  display: block;
+  height: 25vh;
+  margin: 2vh auto;
+  border-radius: 15px;
+  }
+  .producto button {
+  display: block;
+  margin: 2vh auto;
+  width: 50%;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1.5vh 0;
+  font-family: "DM Sans", "sans-serif";
+  cursor: pointer;
+  }
+  .producto input {
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+  font-family: "DM Sans", "sans-serif";
+  border: none;
+  border-bottom: solid black 2px;
+  display: block;
+  margin: 2vh auto;
+  width: 60%;
+  }
+  .producto-nombre {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 2vh 0;
+  text-transform: capitalize;
+  }
+  .producto-cantidad {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  }
+
+/*************************************************Modo Oscuro*************************************************/
+body.dark-mode {
+background-color: black;
+transition: 0.3s ease;
+}
+
+body.dark-mode h1 {
+position: relative;
+width: 100%;
+text-align: center;
+font-family: "DM Sans", "sans-serif";
+font-weight: bold;
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0;
+color: white;
+}
+
+body.dark-mode .tab-link {
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+height: 100%;
+margin: 0;
+padding: 0;
+border: none;
+width: calc(100%/5);
+cursor: pointer;
+font-family: "DM Sans", "sans-serif";
+}
+body.dark-mode .tab-link.active {
+  background-color: green;
+  color: #fff;
+}
+  body.dark-mode .tab-content::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 15px;
+  }
+
+body.dark-mode .tab h3 {
+width: 100%;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+padding: 3vh 0;
+font-family: "DM Sans", "sans-serif";
+color: white;
+}
+
+body.dark-mode .tab form input {
+background-color: transparent;
+border: none;
+border-bottom: solid white 2px;
+outline: none;
+width: calc(100%/4);
+margin: 0 2vh;
+font-family: "DM Sans", "sans-serif";
+padding: 1vh 0;
+color: white;
+}
+body.dark-mode .tab form label {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+padding: 3vh 1vw;
+border: 2px dashed white;
+border-radius: 15px;
+display: inline-block;
+cursor: pointer;
+width: calc(100%/4);
+margin: 0 2vh;
+color: white;
+}
+
+.tab form label p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: "DM Sans", "sans-serif";
+}
+
+.tab form [type=file] {
+position: absolute;
+display: block;
+height: 100%;
+width: 100%;
+opacity: 0;
+text-align: right;
+cursor: pointer;
+}
+
+body.dark-mode .tab form button {
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+border: none;
+border-radius: 15px;
+padding: 2vh 0;
+width: calc(100%/4);
+margin: 0 2vh;
+font-family: "DM Sans", "sans-serif";
+cursor: pointer;
+}
+
+body.dark-mode .producto {
+position: relative;
+margin: 3vh 0;
+width: calc(100%/4.5);
+border: solid white 2px;
+font-family: "DM Sans", "sans-serif";
+border-radius: 15px;
+}
+  body.dark-mode .producto button {
+  display: block;
+  margin: 2vh auto;
+  width: 50%;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 1.5vh 0;
+  font-family: "DM Sans", "sans-serif";
+  cursor: pointer;
+  }
+  body.dark-mode .producto input {
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+  font-family: "DM Sans", "sans-serif";
+  border: none;
+  border-bottom: solid white 2px;
+  display: block;
+  margin: 2vh auto;
+  width: 60%;
+  color: white;
+  }
+  body.dark-mode .producto-nombre {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 2vh 0;
+  text-transform: capitalize;
+  color: white;
+  }
+  body.dark-mode .producto-cantidad {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  }

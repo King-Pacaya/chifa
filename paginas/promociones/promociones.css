@@ -1,0 +1,157 @@
+body {
+background-color: white;
+padding: 0 2vw;
+transition: 0.3s ease;
+}
+body::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
+
+h2 {
+width: 100%;
+font-family: "DM Sans", "sans-serif";
+}
+
+.form {
+font-family: "DM Sans", "sans-serif";
+}
+.form label, .form input, .form button {
+display: block;
+width: 20%;
+font-family: "DM Sans", "sans-serif";
+}
+.form input {
+margin: 1vh 0 4vh 0;
+border: none;
+outline: none;
+border-bottom: solid 2px black;
+background-color: transparent;
+}
+.form button {
+background-color: black;
+color: white;
+border: none;
+border-radius: 15px;
+padding: 1.5vh 0;
+cursor: pointer;
+}
+
+#codigos-guardados {
+width: 100%;
+margin: 0 auto;
+font-family: "DM Sans", "sans-serif";
+display: flex;
+flex-wrap: wrap;
+padding: 0;
+justify-content: space-around;
+}
+
+#codigos-guardados li {
+border: dashed black 2px;
+display: block;
+margin: 2vh 0;
+width: calc(100%/3.6);
+padding: 3vh 2vw 0 2vw;
+}
+
+#codigos-guardados li span {
+position: relative;
+font-weight: bold;
+display: block;
+width: calc(100%/2);
+float: left;
+}
+#codigos-guardados li span span {
+display: block;
+width: 100%;
+font-weight: 100;
+}
+#codigos-guardados li button {
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+padding: 1.5vh 0;
+margin: 4vh 0;
+border-radius: 15px;
+border: none;
+width: 100%;
+font-family: "DM Sans", "sans-serif";
+}
+
+/****************************************Modo Oscuro****************************************/
+body.dark-mode {
+background-color: black;
+padding: 0 2vw;
+transition: 0.3s ease;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 15px;
+}
+
+body.dark-mode h2 {
+width: 100%;
+font-family: "DM Sans", "sans-serif";
+color: white;
+}
+
+body.dark-mode .form label, body.dark-mode .form input, body.dark-mode .form button {
+display: block;
+width: 20%;
+font-family: "DM Sans", "sans-serif";
+color: white;
+}
+body.dark-mode .form input {
+margin: 1vh 0 4vh 0;
+border: none;
+outline: none;
+border-bottom: solid 2px white;
+background-color: transparent;
+}
+body.dark-mode .form button {
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+border: none;
+border-radius: 15px;
+padding: 1.5vh 0;
+cursor: pointer;
+}
+
+body.dark-mode #codigos-guardados li {
+border: dashed white 2px;
+display: block;
+margin: 2vh 0;
+width: calc(100%/3.6);
+padding: 3vh 2vw 0 2vw;
+}
+
+body.dark-mode #codigos-guardados li span {
+position: relative;
+font-weight: bold;
+display: block;
+width: calc(100%/2);
+float: left;
+color: white;
+}
+body.dark-mode #codigos-guardados li span span {
+display: block;
+width: 100%;
+font-weight: 100;
+color: white;
+}
+body.dark-mode #codigos-guardados li button {
+cursor: pointer;
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+padding: 1.5vh 0;
+margin: 4vh 0;
+border-radius: 15px;
+border: none;
+width: 100%;
+font-family: "DM Sans", "sans-serif";
+}
