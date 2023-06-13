@@ -1,0 +1,19 @@
+* {
+box-sizing: border-box;
+}
+
+h1 {
+font-family: "DM Sans", "sans-serif";
+text-align: center;
+}
+
+div {
+width: 100%;
+height: 50vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+img {
+height: 90%;
+}

@@ -28,7 +28,7 @@
       <li><a href="../menu/menu.html" id="menu-subpagina2">Menú</a></li>
       <li><a href="../inventario/inventario.html" id="menu-subpagina3">Inventario</a></li>
       <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
-      <li><a href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
+      <li><a target="_blank" href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
       <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
       <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
       <div id="mode-options">
@@ -48,30 +48,6 @@
         <label for="plato-mesa1">Plato:</label>
         <select id="plato-mesa1" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa1'); }">
           <option value="">Seleccione un plato</option>
-          <option value="14">Chaufa con pollo 14$</option>
-          <option value="14">Chaufa con res 14$</option>
-          <option value="14">Aeropuerto 14$</option>
-          <option value="14">Tallarín saltado con pollo 15$</option>
-          <option value="15">Pollo con verdura con chaufa 15$</option>
-          <option value="15">Tallarín saltado con chaufa 15$</option>
-          <option value="15">Lomo saltado con pollo y chaufa 15$</option>
-          <option value="15">Tallarín saltado con res 15$</option>
-          <option value="15">Lomo saltado con res 16$</option>
-          <option value="16">Alitas arrebozadas c/n chaufa 16$</option>
-          <option value="16">Chicharrón de pollo con chaufa 16$</option>
-          <option value="16">Pollo tamarindo con chaufa 16$</option>
-          <option value="16">Tortilla con chaufa 16$</option>
-          <option value="16">Kan lung wantan con chaufa 17$</option>
-          <option value="17">Ti pa kay con chaufa 17$</option>
-          <option value="17">Chi jou kay con chaufa 17$</option>
-          <option value="17">Pollo enrollado con chaufa 17$</option>
-          <option value="17">Chancho tamarindo con chaufa 17$</option>
-          <option value="17">Alitas arrebozadas con verdura y chaufa 17$</option>
-          <option value="17">Pollo enrollado con verdura y chaufa 17$</option>
-          <option value="17">Camarón con verdura con chaufa 17$</option>
-          <option value="17">Chancho con verdura con chaufa 17$</option>
-          <option value="17">Chi jou kay con verdura 17$</option>
-          <option value="17">Pollo con piña 17$</option>
         </select>
         <button type="button" onclick="agregarPedido('mesa1')">Agregar</button>
       </div>
@@ -140,30 +116,6 @@
         <label for="plato-mesa2">Plato:</label>
         <select id="plato-mesa2" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa2'); }">
           <option value="">Seleccione un plato</option>
-          <option value="14">Chaufa con pollo 14$</option>
-          <option value="14">Chaufa con res 14$</option>
-          <option value="14">Aeropuerto 14$</option>
-          <option value="14">Tallarín saltado con pollo 15$</option>
-          <option value="15">Pollo con verdura con chaufa 15$</option>
-          <option value="15">Tallarín saltado con chaufa 15$</option>
-          <option value="15">Lomo saltado con pollo y chaufa 15$</option>
-          <option value="15">Tallarín saltado con res 15$</option>
-          <option value="15">Lomo saltado con res 16$</option>
-          <option value="16">Alitas arrebozadas c/n chaufa 16$</option>
-          <option value="16">Chicharrón de pollo con chaufa 16$</option>
-          <option value="16">Pollo tamarindo con chaufa 16$</option>
-          <option value="16">Tortilla con chaufa 16$</option>
-          <option value="16">Kan lung wantan con chaufa 17$</option>
-          <option value="17">Ti pa kay con chaufa 17$</option>
-          <option value="17">Chi jou kay con chaufa 17$</option>
-          <option value="17">Pollo enrollado con chaufa 17$</option>
-          <option value="17">Chancho tamarindo con chaufa 17$</option>
-          <option value="17">Alitas arrebozadas con verdura y chaufa 17$</option>
-          <option value="17">Pollo enrollado con verdura y chaufa 17$</option>
-          <option value="17">Camarón con verdura con chaufa 17$</option>
-          <option value="17">Chancho con verdura con chaufa 17$</option>
-          <option value="17">Chi jou kay con verdura 17$</option>
-          <option value="17">Pollo con piña 17$</option>
         </select>
         <button type="button" onclick="agregarPedido('mesa2')">Agregar</button>
       </div>
@@ -221,6 +173,822 @@
   </div>
 </div>
 
+<div id="modal-mesa3" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa3">Cantidad:</label>
+        <input type="number" id="cantidad-mesa3" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa3'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa3">Plato:</label>
+        <select id="plato-mesa3" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa3'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa3')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa3">Camarero:</label>
+        <input type="text" id="camarero-mesa3" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa3');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa3">Método de Pago:</label>
+        <select id="metodo-pago-mesa3">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa3">Tipo de documento:</label>
+        <select id="tipo-documento-mesa3" onchange="mostrarRUC(this.value, 'mesa3')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa3" style="display: none;">
+          <label for="ruc-mesa3">RUC:</label>
+          <input type="text" id="ruc-mesa3" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa3">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa3'); }">  
+            <input type="text" id="codigo-promocional-mesa3" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa3')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa3')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa3')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa3')">Cerrar</button>
+      </div>
+    <table id="mesa3-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa3-pedidos-body"></tbody>
+    </table>
+    <div id="mesa3-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa4" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa4">Cantidad:</label>
+        <input type="number" id="cantidad-mesa4" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa4'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa4">Plato:</label>
+        <select id="plato-mesa4" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa4'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa4')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa4">Camarero:</label>
+        <input type="text" id="camarero-mesa4" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa4');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa4">Método de Pago:</label>
+        <select id="metodo-pago-mesa4">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa4">Tipo de documento:</label>
+        <select id="tipo-documento-mesa4" onchange="mostrarRUC(this.value, 'mesa4')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa4" style="display: none;">
+          <label for="ruc-mesa4">RUC:</label>
+          <input type="text" id="ruc-mesa4" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa4">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa4'); }">  
+            <input type="text" id="codigo-promocional-mesa4" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa4')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa4')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa4')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa4')">Cerrar</button>
+      </div>
+    <table id="mesa4-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa4-pedidos-body"></tbody>
+    </table>
+    <div id="mesa4-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa5" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa5">Cantidad:</label>
+        <input type="number" id="cantidad-mesa5" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa5'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa5">Plato:</label>
+        <select id="plato-mesa5" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa5'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa5')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa5">Camarero:</label>
+        <input type="text" id="camarero-mesa5" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa5');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa5">Método de Pago:</label>
+        <select id="metodo-pago-mesa5">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa5">Tipo de documento:</label>
+        <select id="tipo-documento-mesa5" onchange="mostrarRUC(this.value, 'mesa5')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa5" style="display: none;">
+          <label for="ruc-mesa5">RUC:</label>
+          <input type="text" id="ruc-mesa5" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa5">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa5'); }">  
+            <input type="text" id="codigo-promocional-mesa5" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa5')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa5')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa5')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa5')">Cerrar</button>
+      </div>
+    <table id="mesa5-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa5-pedidos-body"></tbody>
+    </table>
+    <div id="mesa5-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa6" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa6">Cantidad:</label>
+        <input type="number" id="cantidad-mesa6" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa6'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa6">Plato:</label>
+        <select id="plato-mesa6" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa6'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa6')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa6">Camarero:</label>
+        <input type="text" id="camarero-mesa6" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa6');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa6">Método de Pago:</label>
+        <select id="metodo-pago-mesa6">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa6">Tipo de documento:</label>
+        <select id="tipo-documento-mesa6" onchange="mostrarRUC(this.value, 'mesa6')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa6" style="display: none;">
+          <label for="ruc-mesa6">RUC:</label>
+          <input type="text" id="ruc-mesa6" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa6">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa6'); }">  
+            <input type="text" id="codigo-promocional-mesa6" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa6')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa6')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa6')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa6')">Cerrar</button>
+      </div>
+    <table id="mesa6-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa6-pedidos-body"></tbody>
+    </table>
+    <div id="mesa6-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa7" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa7">Cantidad:</label>
+        <input type="number" id="cantidad-mesa7" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa7'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa7">Plato:</label>
+        <select id="plato-mesa7" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa7'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa7')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa7">Camarero:</label>
+        <input type="text" id="camarero-mesa7" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa7');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa7">Método de Pago:</label>
+        <select id="metodo-pago-mesa7">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa7">Tipo de documento:</label>
+        <select id="tipo-documento-mesa7" onchange="mostrarRUC(this.value, 'mesa7')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa7" style="display: none;">
+          <label for="ruc-mesa7">RUC:</label>
+          <input type="text" id="ruc-mesa7" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa7">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa7'); }">  
+            <input type="text" id="codigo-promocional-mesa7" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa7')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa7')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa7')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa7')">Cerrar</button>
+      </div>
+    <table id="mesa7-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa7-pedidos-body"></tbody>
+    </table>
+    <div id="mesa7-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa8" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa8">Cantidad:</label>
+        <input type="number" id="cantidad-mesa8" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa8'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa8">Plato:</label>
+        <select id="plato-mesa8" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa8'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa8')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa8">Camarero:</label>
+        <input type="text" id="camarero-mesa8" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa8');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa8">Método de Pago:</label>
+        <select id="metodo-pago-mesa8">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa8">Tipo de documento:</label>
+        <select id="tipo-documento-mesa8" onchange="mostrarRUC(this.value, 'mesa8')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa8" style="display: none;">
+          <label for="ruc-mesa8">RUC:</label>
+          <input type="text" id="ruc-mesa8" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa8">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa8'); }">  
+            <input type="text" id="codigo-promocional-mesa8" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa8')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa8')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa8')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa8')">Cerrar</button>
+      </div>
+    <table id="mesa8-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa8-pedidos-body"></tbody>
+    </table>
+    <div id="mesa8-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa9" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa9">Cantidad:</label>
+        <input type="number" id="cantidad-mesa9" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa9'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa9">Plato:</label>
+        <select id="plato-mesa9" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa9'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa9')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa9">Camarero:</label>
+        <input type="text" id="camarero-mesa9" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa9');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa9">Método de Pago:</label>
+        <select id="metodo-pago-mesa9">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa9">Tipo de documento:</label>
+        <select id="tipo-documento-mesa9" onchange="mostrarRUC(this.value, 'mesa9')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa9" style="display: none;">
+          <label for="ruc-mesa9">RUC:</label>
+          <input type="text" id="ruc-mesa9" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa9">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa9'); }">  
+            <input type="text" id="codigo-promocional-mesa9" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa9')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa9')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa9')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa9')">Cerrar</button>
+      </div>
+    <table id="mesa9-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa9-pedidos-body"></tbody>
+    </table>
+    <div id="mesa9-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa10" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa10">Cantidad:</label>
+        <input type="number" id="cantidad-mesa10" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa10'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa10">Plato:</label>
+        <select id="plato-mesa10" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa10'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa10')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa10">Camarero:</label>
+        <input type="text" id="camarero-mesa10" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa10');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa10">Método de Pago:</label>
+        <select id="metodo-pago-mesa10">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa10">Tipo de documento:</label>
+        <select id="tipo-documento-mesa10" onchange="mostrarRUC(this.value, 'mesa10')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa10" style="display: none;">
+          <label for="ruc-mesa10">RUC:</label>
+          <input type="text" id="ruc-mesa10" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa10">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa10'); }">  
+            <input type="text" id="codigo-promocional-mesa10" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa10')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa10')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa10')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa10')">Cerrar</button>
+      </div>
+    <table id="mesa10-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa10-pedidos-body"></tbody>
+    </table>
+    <div id="mesa10-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa11" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa11">Cantidad:</label>
+        <input type="number" id="cantidad-mesa11" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa11'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa11">Plato:</label>
+        <select id="plato-mesa11" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa11'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa11')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa11">Camarero:</label>
+        <input type="text" id="camarero-mesa11" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa11');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa11">Método de Pago:</label>
+        <select id="metodo-pago-mesa11">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa11">Tipo de documento:</label>
+        <select id="tipo-documento-mesa11" onchange="mostrarRUC(this.value, 'mesa11')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa11" style="display: none;">
+          <label for="ruc-mesa11">RUC:</label>
+          <input type="text" id="ruc-mesa11" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa11">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa11'); }">  
+            <input type="text" id="codigo-promocional-mesa11" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa11')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa11')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa11')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa11')">Cerrar</button>
+      </div>
+    <table id="mesa11-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa11-pedidos-body"></tbody>
+    </table>
+    <div id="mesa11-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa12" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa12">Cantidad:</label>
+        <input type="number" id="cantidad-mesa12" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa12'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa12">Plato:</label>
+        <select id="plato-mesa12" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa12'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa12')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa12">Camarero:</label>
+        <input type="text" id="camarero-mesa12" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa12');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa12">Método de Pago:</label>
+        <select id="metodo-pago-mesa12">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa12">Tipo de documento:</label>
+        <select id="tipo-documento-mesa12" onchange="mostrarRUC(this.value, 'mesa12')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa12" style="display: none;">
+          <label for="ruc-mesa12">RUC:</label>
+          <input type="text" id="ruc-mesa12" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa12">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa12'); }">  
+            <input type="text" id="codigo-promocional-mesa12" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa12')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa12')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa12')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa12')">Cerrar</button>
+      </div>
+    <table id="mesa12-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa12-pedidos-body"></tbody>
+    </table>
+    <div id="mesa12-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa13" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa13">Cantidad:</label>
+        <input type="number" id="cantidad-mesa13" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa13'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa13">Plato:</label>
+        <select id="plato-mesa13" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa13'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa13')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa13">Camarero:</label>
+        <input type="text" id="camarero-mesa13" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa13');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa13">Método de Pago:</label>
+        <select id="metodo-pago-mesa13">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa13">Tipo de documento:</label>
+        <select id="tipo-documento-mesa13" onchange="mostrarRUC(this.value, 'mesa13')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa13" style="display: none;">
+          <label for="ruc-mesa13">RUC:</label>
+          <input type="text" id="ruc-mesa13" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa13">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa13'); }">  
+            <input type="text" id="codigo-promocional-mesa13" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa13')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa13')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa13')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa13')">Cerrar</button>
+      </div>
+    <table id="mesa13-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa13-pedidos-body"></tbody>
+    </table>
+    <div id="mesa13-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
+<div id="modal-mesa14" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">Mesa 1</div>
+      <div class="modal-input">
+        <label for="cantidad-mesa14">Cantidad:</label>
+        <input type="number" id="cantidad-mesa14" placeholder="Cantidad" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa14'); }">
+      </div>
+      <div class="modal-input">
+        <label for="plato-mesa14">Plato:</label>
+        <select id="plato-mesa14" required="" onkeydown="if(event.keyCode===13) { agregarPedido('mesa14'); }">
+          <option value="">Seleccione un plato</option>
+        </select>
+        <button type="button" onclick="agregarPedido('mesa14')">Agregar</button>
+      </div>
+      <div class="modal-input">
+        <label for="camarero-mesa14">Camarero:</label>
+        <input type="text" id="camarero-mesa14" placeholder="Nombre del Camarero" onkeydown="if(event.keyCode===13) { agregarPedido('mesa14');}">
+      </div>
+      <div class="modal-input">
+        <label for="metodo-pago-mesa14">Método de Pago:</label>
+        <select id="metodo-pago-mesa14">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Yape">Yape</option>
+          <option value="Plin">Plin</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="modal-input">
+        <label for="tipo-documento-mesa14">Tipo de documento:</label>
+        <select id="tipo-documento-mesa14" onchange="mostrarRUC(this.value, 'mesa14')">
+          <option value="boleta">Boleta</option>
+          <option value="factura">Factura</option>
+        </select>
+        <div id="ruc-container-mesa14" style="display: none;">
+          <label for="ruc-mesa14">RUC:</label>
+          <input type="text" id="ruc-mesa14" placeholder="Ingrese el RUC" />
+        </div>
+      </div>
+      <div class="modal-input">
+        <div>
+          <label for="codigo-promocional-mesa14">Código promocional:</label>
+          <form onkeydown="if(event.keyCode === 13) { event.preventDefault(); aplicarPromocion('mesa14'); }">  
+            <input type="text" id="codigo-promocional-mesa14" placeholder="Ingrese un código">
+            <button type="button" onclick="aplicarPromocion('mesa14')">Aplicar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-button">
+        <button type="button" onclick="limpiarPedidos('mesa14')">Limpiar</button>
+        <button type="button" onclick="imprimirPedido('mesa14')">Imprimir</button>
+        <button type="button" onclick="closeModal('mesa14')">Cerrar</button>
+      </div>
+    <table id="mesa14-pedidos" class="pedido-table">
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Pedido</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mesa14-pedidos-body"></tbody>
+    </table>
+    <div id="mesa14-total" class="pedido-total">Total: $0.00</div>
+  </div>
+</div>
+
   <div class="mesa-container">
     <div id="mesa1" class="mesa">
       <div class="mesa-title" id="mesa1-title">Mesa 1</div>
@@ -230,14 +998,85 @@
       <div class="mesa-title" id="mesa2-title">Mesa 2</div>
       <button type="button" onclick="openModal('mesa2')">Ver pedidos</button>
     </div>
+    <div id="mesa3" class="mesa">
+      <div class="mesa-title" id="mesa3-title">Mesa 3</div>
+      <button type="button" onclick="openModal('mesa3')">Ver pedidos</button>
+    </div>
+    <div id="mesa4" class="mesa">
+      <div class="mesa-title" id="mesa4-title">Mesa 4</div>
+      <button type="button" onclick="openModal('mesa4')">Ver pedidos</button>
+    </div>
+    <div id="mesa5" class="mesa">
+      <div class="mesa-title" id="mesa5-title">Mesa 5</div>
+      <button type="button" onclick="openModal('mesa5')">Ver pedidos</button>
+    </div>
+    <div id="mesa6" class="mesa">
+      <div class="mesa-title" id="mesa6-title">Mesa 6</div>
+      <button type="button" onclick="openModal('mesa6')">Ver pedidos</button>
+    </div>
+    <div id="mesa7" class="mesa">
+      <div class="mesa-title" id="mesa7-title">Mesa 7</div>
+      <button type="button" onclick="openModal('mesa7')">Ver pedidos</button>
+    </div>
+    <div id="mesa8" class="mesa">
+      <div class="mesa-title" id="mesa8-title">Mesa 8</div>
+      <button type="button" onclick="openModal('mesa8')">Ver pedidos</button>
+    </div>
+    <div id="mesa9" class="mesa">
+      <div class="mesa-title" id="mesa9-title">Mesa 9</div>
+      <button type="button" onclick="openModal('mesa9')">Ver pedidos</button>
+    </div>
+    <div id="mesa10" class="mesa">
+      <div class="mesa-title" id="mesa10-title">Mesa 10</div>
+      <button type="button" onclick="openModal('mesa10')">Ver pedidos</button>
+    </div>
+    <div id="mesa11" class="mesa">
+      <div class="mesa-title" id="mesa11-title">Mesa 11</div>
+      <button type="button" onclick="openModal('mesa11')">Ver pedidos</button>
+    </div>
+    <div id="mesa12" class="mesa">
+      <div class="mesa-title" id="mesa12-title">Mesa 12</div>
+      <button type="button" onclick="openModal('mesa12')">Ver pedidos</button>
+    </div>
+    <div id="mesa13" class="mesa">
+      <div class="mesa-title" id="mesa13-title">Mesa 13</div>
+      <button type="button" onclick="openModal('mesa13')">Ver pedidos</button>
+    </div>
+    <div id="mesa14" class="mesa">
+      <div class="mesa-title" id="mesa14-title">Mesa 14</div>
+      <button type="button" onclick="openModal('mesa14')">Ver pedidos</button>
+    </div>
   </div>
 
 
 <form id="nuevo-plato-form">
+  <label>Ingresa un nuevo plato o bebida:</label>
   <input type="text" id="nombre-plato-input" placeholder="Nombre del plato" required>
   <input type="number" id="precio-plato-input" placeholder="Precio del plato" required>
+  <select id="categoria-plato-select">
+    <option value="">Seleccione una categoría</option>
+    <option value="normal">Normal</option>
+    <option value="tallarin tostado">Tallarin Tostado</option>
+    <option value="tallarin">Tallarín</option>
+    <option value="arroz chaufa">Arroz Chaufa</option>
+    <option value="fideo chino">Fideo Chino</option>
+    <option value="sopas">Sopas</option>
+    <option value="gallina">Gallina</option>
+    <option value="platos populares">Platos Populares</option>
+    <option value="pato">Pato</option>
+    <option value="chancho">Chancho</option>
+    <option value="langostino">Langostino</option>
+    <option value="platos especiales">Platos Especiales</option>
+    <option value="caldos">Caldos</option>
+    <option value="tortillado">Tortillado</option>
+    <option value="familiar">Familiar</option>
+    <option value="res">Res</option>
+    <option value="pescado">Pescado</option>
+    <option value="bebidas">Bebidas</option>
+  </select>
   <button type="submit">Agregar plato</button>
 </form>
+
 
 <table class="tablem">
   <thead>
@@ -248,8 +1087,63 @@
     </tr>
   </thead>
   <tbody id="platos-agregados-list">
+    <tr class="categoria-row">
+      <td colspan="3">Normal</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Tallarin Tostado</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Tallarin</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Arroz Chaufa</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Fideo Chino</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Sopas</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Gallina</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Platos Populares</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Pato</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Chancho</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Langostino</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Platos Especiales</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Caldos</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Tortillado</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Familiar</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Res</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Pescado</td>
+    </tr>
+    <tr class="categoria-row">
+      <td colspan="3">Bebidas</td>
+    </tr>
   </tbody>
 </table>
+
 
   <script src="mesas.js"></script>
   <script src="../validacion.js"></script>

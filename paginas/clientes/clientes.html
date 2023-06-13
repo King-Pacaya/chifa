@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" href="../../multimedia/favicon.png">
   <link rel="stylesheet" type="text/css" href="../menu.css">
-  <link rel="stylesheet" type="text/css" href="clientes.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Oswald&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="clientes.css">
 </head>
 <body>
-
   <!-- Botón para abrir/cerrar el menú -->
   <button id="menu-toggle-button" onclick="toggleMenu()">
     <span></span>
@@ -28,7 +27,7 @@
       <li><a href="../menu/menu.html" id="menu-subpagina2">Menú</a></li>
       <li><a href="../inventario/inventario.html" id="menu-subpagina3">Inventario</a></li>
       <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
-      <li><a href="clientes.html" id="menu-subpagina5">Clientes</a></li>
+      <li><a target="_blank" href="clientes.html" id="menu-subpagina5">Clientes</a></li>
       <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
       <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
       <div id="mode-options">
@@ -38,10 +37,168 @@
   </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.42718" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.42718" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.42718" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.42718" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.42718" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/payments/validategateways.js?v=3.3.42718" type="text/javascript"></script>
+<script type="text/javascript"> JotForm.newDefaultTheme = true;
+  JotForm.extendsNewTheme = false;
+  JotForm.singleProduct = false;
+  JotForm.newPaymentUIForNewCreatedForms = true;
+  JotForm.newPaymentUI = true;
+  JotForm.clearFieldOnHide="disable";
+  JotForm.submitError="jumpToFirstError";
+
+  JotForm.init(function(){
+  /*INIT-START*/
+      JotForm.setPhoneMaskingValidator( 'input_4_full', '\u0028\u002b51\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u002d\u0023\u0023\u0023' );
+      JotForm.setPhoneMaskingValidator( 'input_7_full', '\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023' );
+      JotForm.alterTexts({"ageVerificationError":"Debe ser mayor de {minAge} años para enviar este formulario.","alphabetic":"Este campo solo puede contener letras.","alphanumeric":"Este campo solo puede contener letras y números.","appointmentSelected":"Ha seleccionado {time} el {date}","ccDonationMinLimitError":"La cantidad mínima es {minAmount} {currency}","ccInvalidCVC":"El número CVC no es válido.","ccInvalidExpireDate":"La fecha de expiración no es válida","ccInvalidNumber":"El número de su tarjeta de crédito no es válido.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Escriba los valores numéricos de la cantidad a donar.","ccMissingProduct":"Por favor seleccione al menos un producto.","characterLimitError":"Demasiados caracteres. El límite es","characterMinLimitError":"Muy pocos caracteres. El mínimum es","confirmClearForm":"¿Está seguro que desea limpiar el formulario?","confirmEmail":"El correo electrónico no coincide","currency":"Este campo sólo puede contener valores de moneda.","cyrillic":"Este campo solo puede contener caracteres cirílicos.","dateInvalid":"Esta fecha no es valida. El formato de fecha es {format}","dateInvalidSeparate":"Esta fecha no es válida. Ponga una {element} válida","dateLimited":"Esta fecha no está disponible.","disallowDecimals":"Por favor, introduzca un número entero.","dragAndDropFilesHere_infoMessage":"Arrastre y suelte archivos aquí","email":"Introduzca una dirección e-mail válida","fillMask":"El valor de este campo debe llenar la mascara","freeEmailError":"No se permiten cuentas de correo gratuitas","generalError":"Existen errores en el formulario, por favor corríjalos antes de continuar.","generalPageError":"Hay errores en esta página. Por favor, corríjalos antes de continuar.","gradingScoreError":"El puntaje total debería ser sólo &amp;quot;menos que&amp;quot; o &amp;quot;igual que&amp;quot;","incompleteFields":"Existen campos requeridos incompletos. Por favor complételos.","inputCarretErrorA":"La entrada no debe ser inferior al valor mínimo:","inputCarretErrorB":"La entrada debe ser menor al valor:","justSoldOut":"Se acaba de agotar","lessThan":"Su puntuación debería ser menor o igual que","maxDigitsError":"El máximo de dígitos permitido es","maxFileSize_infoMessage":"Máximo tamaño de archivo","maxSelectionsError":"The maximum number of selections allowed is ","minSelectionsError":"El número mínimo de opciones obligatorias es","multipleFileUploads_emptyError":"El archivo {file} está vacío; por favor, seleccione de nuevo los archivos sin él.","multipleFileUploads_fileLimitError":"Solo se permite subir {fileLimit} archivo(s)","multipleFileUploads_minSizeError":"El archivo {file} es demasiado pequeño, el tamaño mínimo es: {minSizeLimit}.","multipleFileUploads_onLeave":"Se están cargando los archivos, si cierra ahora, se cancelará dicha carga.","multipleFileUploads_sizeError":"El archivo {file} es demasiado grande; el tamaño del archivo no debe superar {sizeLimit}.","multipleFileUploads_typeError":"El archivo {file} posee una extensión no permitida. Solo están permitidas las extensiones {extensions}.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","noSlotsAvailable":"No hay cupos disponibles","notEnoughStock":"No hay suficientes existencias para la selección actual","notEnoughStock_remainedItems":"No hay suficientes existencias para la selección actual (quedan {count} artículos)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"Este campo sólo admite valores numéricos.","pastDatesDisallowed":"La fecha debe ser futura","pleaseWait":"Por favor, espere ...","required":"Este campo es obligatorio.","requireEveryCell":"Se requieren todas las celdas.","requireEveryRow":"Todas las filas son obligatorias.","requireOne":"Al menos un campo obligatorio.","restrictedDomain":"This domain is not allowed","selectionSoldOut":"Selección agotada","slotUnavailable":"{time} del {date} ha sido tomada. Favor seleccionar otro espacio.","soldOut":"Agotado","subProductItemsLeft":"(quedan {count} productos)","uploadExtensions":"Solo puede subir los siguientes archivos:","uploadFilesize":"Tamaño del archivo no puede ser mayor que:","uploadFilesizemin":"Tamañao de archivo no puede ser menos de:","url":"Este campo solo contiene una URL válida.","validateEmail":"Usted necesita validar este e-mail","wordLimitError":"Demasiadas palabras. El límite es","wordMinLimitError":"Muy pocas palabras. El mínimo es"});
+  /*INIT-END*/
+  });
+
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"heading","qid":"1","text":"Clientes","type":"control_head"},{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},{"description":"","name":"nombre","qid":"3","text":"Nombre","type":"control_fullname"},{"description":"","name":"numeroDe","qid":"4","text":"Numero de telefono","type":"control_phone"},null,null,{"description":"","name":"dni","qid":"7","text":"DNI","type":"control_phone"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Clientes","type":"control_head"},{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},{"description":"","name":"nombre","qid":"3","text":"Nombre","type":"control_fullname"},{"description":"","name":"numeroDe","qid":"4","text":"Numero de telefono","type":"control_phone"},null,null,{"description":"","name":"dni","qid":"7","text":"DNI","type":"control_phone"}]);}, 20); 
+</script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.42718"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.42718" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.42718" />
+<form class="jotform-form" action="https://submit.jotform.com/submit/231633474907056" method="post" name="form_231633474907056" id="231633474907056" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231633474907056" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_1" class="form-header" data-component="header">Clientes</h1>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="first_3"> Nombre<span class="form-required">*</span> </label>
+        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_nombre[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_nombre[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Apellido</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_phone" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4_full"> Número de teléfono<span class="form-required">*</span> </label>
+        <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_4_full" name="q4_numeroDe[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_4 tel-local" style="width:310px" data-masked="true" value="" placeholder="(+51) 000-000-000" data-component="phone" aria-labelledby="label_4 sublabel_4_masked" required="" /><label class="form-sub-label" for="input_4_full" id="sublabel_4_masked" style="min-height:13px" aria-hidden="false">Favor ingrese un número de teléfono válido.</label></span> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_phone" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7_full"> DNI<span class="form-required">*</span> </label>
+        <div id="cid_7" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_7_full" name="q7_dni[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_7 tel-local" style="width:310px" data-masked="true" value="" placeholder="00000000" data-component="phone" aria-labelledby="label_7 sublabel_7_masked" required="" /><label class="form-sub-label" for="input_7_full" id="sublabel_7_masked" style="min-height:13px" aria-hidden="false">Ingrese el DNI</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Enviar</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Desarrollado por Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="231633474907056" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='231633474907056'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "231633474907056-231633474907056";
+    }
+  </script>
+</form>
+<script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.42718"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.42718"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <script src="clientes.js"></script>
   <script src="../validacion.js"></script>
   <script src="../menu.js"></script>
   <script src="../mode.js"></script>
 </body>
-
 </html>

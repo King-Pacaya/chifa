@@ -1,0 +1,180 @@
+body {
+transition: 0.3s ease;
+}
+body::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
+
+
+
+
+
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+    }
+  
+    .form-all {
+      color: #2C3345;
+    }
+    .form-header-group .form-header {
+      color: #2C3345;
+    }
+    .form-header-group .form-subHeader {
+      color: #2C3345;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #2C3345;
+    }
+    .form-sub-label {
+      color: #464d5f;
+    }
+  
+  .supernova {
+    background-color: #f3f3fe;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #fff;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    };
+  
+    .form-all {
+      background-image: none;
+    }
+  
+    .form-all {
+      position: relative;
+    }
+    .form-all {
+      margin-top: 162px;
+    }
+    .form-all:before {
+      top: -152px;
+      background-position: top center;
+      left: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.dark-mode {
+font-family: Inter,sans-serif;
+font-size: 16px;
+background-color: #121212;
+color: white;
+transition: 0.3s ease;
+}
+
+body.dark-mode .form-all {
+border-radius: 3px;
+box-shadow: 0 4px 4px rgba(87,100,126,.21);
+background-color: black;
+max-width: 752px;
+}
+
+body.dark-mode .form-header-group .form-header {
+color: white;
+}
+
+body.dark-mode .form-label {
+color: white;
+}
+
+body.dark-mode .form-sub-label {
+color: white;
+}

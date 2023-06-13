@@ -12,6 +12,15 @@ z-index: 9999;
 .menu {
 background-color: white;
 border-right: solid black 2px;
+overflow: auto;
+}
+.menu::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+.menu::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
 }
 
   #menu.open {
@@ -43,7 +52,7 @@ border-right: solid black 2px;
 
   #menu button {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 5vh auto;
   width: 80%;
   padding: 1.5vh 0;
   border-radius: 10px;
@@ -99,7 +108,14 @@ body.dark-mode .menu {
 background-color: black;
 border-right: solid white 2px;
 }
-
+body.dark-mode .menu::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body.dark-mode .menu::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 15px;
+}
   body.dark-mode #menu li a {
   text-decoration: none;
   color: black;
@@ -113,7 +129,7 @@ border-right: solid white 2px;
 
   body.dark-mode #menu button {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 5vh auto;
   width: 80%;
   padding: 1.5vh 0;
   border-radius: 10px;

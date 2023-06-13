@@ -37,7 +37,7 @@ border-radius: 15px;
 	}
 	form input {
 	display: block;
-	width: calc(100%/2.3);
+	width: calc(100%/3.5);
 	margin: 5vh 1vw;
 	padding: 0.5vh 0;
 	outline: none;
@@ -47,6 +47,24 @@ border-radius: 15px;
 	background-color: transparent;
 	font-family: "DM Sans", "sans-serif";
 	}
+  form select {
+  display: block;
+  width: calc(100%/3.5);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border: solid black 2px;
+  border-radius: 15px;
+  float: left;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";  
+  }
+  form option {
+  background-color: white;
+  font-family: "DM Sans", "sans-serif";  
+  }
 	form button {
 	display: block;
 	width: 100%;
@@ -63,7 +81,7 @@ border-radius: 15px;
 
 .div {
 position: relative;
-width: 50%;
+width: 100%;
 float: left;
 margin: 2vh 0;
 }
@@ -100,6 +118,7 @@ border-radius: 15px;
 	table td {
 	text-transform: capitalize;
 	text-align: center;
+	width: calc(100%/3);
 	}
 	table button {
 	display: block;
@@ -114,6 +133,13 @@ border-radius: 15px;
 	border-radius: 15px;
 	cursor: pointer;
 	}
+  .tablem .categoria-td {
+  border-bottom: solid black 2px;
+  border-top: solid black 2px;
+  font-weight: bold;
+  padding: 1vh 0;
+  text-transform: uppercase;
+  }
 
 /*****************************************Modo Oscuro*****************************************/
 body.dark-mode {
@@ -153,7 +179,7 @@ border-radius: 15px;
 	}
 	body.dark-mode form input {
 	display: block;
-	width: calc(100%/2.3);
+	width: calc(100%/3.5);
 	margin: 5vh 1vw;
 	padding: 0.5vh 0;
 	outline: none;
@@ -163,6 +189,25 @@ border-radius: 15px;
 	font-family: "DM Sans", "sans-serif";
 	color: white;
 	}
+  body.dark-mode form select {
+  display: block;
+  width: calc(100%/3.5);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border: solid white 2px;
+  color: white;
+  border-radius: 15px;
+  float: left;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";  
+  }
+  body.dark-mode form option {
+  background-color: black;
+  font-family: "DM Sans", "sans-serif";  
+  }
 	body.dark-mode form button {
 	display: block;
 	width: 100%;
@@ -214,6 +259,13 @@ border-radius: 15px;
 	border-radius: 15px;
 	cursor: pointer;
 	}
+  body.dark-mode .tablem .categoria-td {
+  border-bottom: solid white 2px;
+  border-top: solid white 2px;
+  font-weight: bold;
+  padding: 1vh 0;
+  text-transform: uppercase;
+  }
 
 		body.dark-mode .imgqr img {
 		height: 80%;

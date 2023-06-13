@@ -281,7 +281,7 @@ color: white;
   body.dark-mode .modal-input select {
   position: relative;
   font-family: "DM Sans", "sans-serif";
-  border: solid black 2px;
+  border: solid white 2px;
   border-radius: 10px;
   cursor: pointer;
   outline: none;
@@ -351,6 +351,7 @@ margin: 5vh auto;
 padding: 2vh 2vw;
 flex-direction: column;
 border-radius: 15px;
+font-family: "DM Sans", "sans-serif";
 }
   #nuevo-plato-form label {
   display: block;
@@ -359,10 +360,11 @@ border-radius: 15px;
   margin-bottom: 2vh;
   font-weight: bold;
   font-size: 20px;
+  font-family: "DM Sans", "sans-serif";
   }
   #nuevo-plato-form input {
   display: block;
-  width: calc(100%/2.3);
+  width: calc(100%/3.5);
   margin: 5vh 1vw;
   padding: 0.5vh 0;
   outline: none;
@@ -371,6 +373,24 @@ border-radius: 15px;
   float: left;
   background-color: transparent;
   font-family: "DM Sans", "sans-serif";
+  }
+  #nuevo-plato-form select {
+  display: block;
+  width: calc(100%/3.5);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border: solid black 2px;
+  border-radius: 15px;
+  float: left;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "DM Sans", "sans-serif";  
+  }
+  #nuevo-plato-form option {
+  background-color: white;
+  font-family: "DM Sans", "sans-serif";  
   }
   #nuevo-plato-form button {
   display: block;
@@ -400,6 +420,7 @@ border-radius: 15px;
   text-transform: capitalize;
   text-align: center;
   font-family: "DM Sans", "sans-serif";
+  width: calc(100%/3);
   }
   .tablem button {
   display: block;
@@ -413,6 +434,13 @@ border-radius: 15px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  }
+  .tablem .categoria-td {
+  border-bottom: solid black 2px;
+  border-top: solid black 2px;
+  font-weight: bold;
+  padding: 1vh 0;
+  text-transform: uppercase;
   }
 
 
@@ -433,10 +461,11 @@ border-radius: 15px;
   font-weight: bold;
   font-size: 20px;
   color: white;
+  font-family: "DM Sans", "sans-serif";
   }
   body.dark-mode #nuevo-plato-form input {
   display: block;
-  width: calc(100%/2.3);
+  width: calc(100%/3.5);
   margin: 5vh 1vw;
   padding: 0.5vh 0;
   outline: none;
@@ -445,6 +474,25 @@ border-radius: 15px;
   float: left;
   font-family: "DM Sans", "sans-serif";
   color: white;
+  }
+  body.dark-mode #nuevo-plato-form select {
+  display: block;
+  width: calc(100%/3.5);
+  margin: 5vh 1vw;
+  padding: 0.5vh 0;
+  outline: none;
+  border: none;
+  border: solid white 2px;
+  border-radius: 15px;
+  float: left;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-family: "DM Sans", "sans-serif";  
+  }
+  body.dark-mode #nuevo-plato-form option {
+  background-color: black;
+  font-family: "DM Sans", "sans-serif";  
   }
   body.dark-mode #nuevo-plato-form button {
   display: block;
@@ -489,4 +537,11 @@ border-radius: 15px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  }
+  body.dark-mode .tablem .categoria-td {
+  border-bottom: solid white 2px;
+  border-top: solid white 2px;
+  font-weight: bold;
+  padding: 1vh 0;
+  text-transform: uppercase;
   }
