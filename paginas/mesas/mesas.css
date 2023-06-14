@@ -2,8 +2,15 @@ body {
 background-color: white;
 transition: 0.3s ease;
 }
-
-#nuevo-plato-form, #platos-agregados-list, .tablem {
+body::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
+#nuevo-plato-form, #platos-agregados-list, .tablem, #transacciones {
 display: none;
 }
 .mesa-container {
@@ -182,7 +189,14 @@ body.dark-mode {
 background-color: black;
 transition: 0.3s ease;
 }
-
+body.dark-mode::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 15px;
+}
   body.dark-mode .mesa-title {
   margin: 0;
   font-size: 25px;
@@ -297,7 +311,6 @@ color: white;
     border-radius: 15px;
     color: white;
     }
-
     body.dark-mode .pedido-total {
     font-weight: bold;
     text-align: right;
@@ -306,242 +319,57 @@ color: white;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#nuevo-plato-form {
-position: relative;
-border: solid black 2px;
-width: 50%;
-margin: 5vh auto;
-padding: 2vh 2vw;
-flex-direction: column;
+.transaccion {
+display: block;
+margin: 2vh auto;
+width: 90%;
 border-radius: 15px;
+border: solid black 2px;
+padding: 0 3vw;
+}
+.transaccion .title {
+width: 100%;
+text-align: center;
+font-weight: bold;
+font-size: 25px;
+}
+.transaccion .total {
+font-weight: bold;
+}
+.transaccion table {
+border: solid black 2px;
+display: block;
+margin: 0 auto;
+width: 100%;
+border-radius: 15px;
+}
+.transaccion thead, .transaccion tbody {
+display: block;
+width: 100%;
+}
+.transaccion tr {
+display: flex;
+width: 100%;
+padding: 1vh 0;
+}
+.transaccion th, .transaccion td {
+width: calc(100%/3);
+text-align: center;
+}
+.transaccion td:nth-child(4) {
+display: none;
+}
+.transaccion button {
+display: block;
+width: 70%;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
 font-family: "DM Sans", "sans-serif";
-}
-  #nuevo-plato-form label {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2vh;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: "DM Sans", "sans-serif";
-  }
-  #nuevo-plato-form input {
-  display: block;
-  width: calc(100%/3.5);
-  margin: 5vh 1vw;
-  padding: 0.5vh 0;
-  outline: none;
-  border: none;
-  border-bottom: solid black 2px; 
-  float: left;
-  background-color: transparent;
-  font-family: "DM Sans", "sans-serif";
-  }
-  #nuevo-plato-form select {
-  display: block;
-  width: calc(100%/3.5);
-  margin: 5vh 1vw;
-  padding: 0.5vh 0;
-  outline: none;
-  border: none;
-  border: solid black 2px;
-  border-radius: 15px;
-  float: left;
-  background-color: transparent;
-  cursor: pointer;
-  font-family: "DM Sans", "sans-serif";  
-  }
-  #nuevo-plato-form option {
-  background-color: white;
-  font-family: "DM Sans", "sans-serif";  
-  }
-  #nuevo-plato-form button {
-  display: block;
-  width: 100%;
-  font-family: "DM Sans", "sans-serif";
-  font-weight: bold;
-  margin: 1vh auto;
-  padding: 2vh 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  }
-
-.tablem {
-border: solid black 2px;
-width: 90%;
-margin: 0 auto;
+font-weight: bold;
+padding: 1.5vh ;
+margin: 2vh auto;
 border-radius: 15px;
+border: none;
+text-align: center;
+cursor: pointer;
 }
-  .tablem th {
-  padding: 2.5vh 0;
-  font-family: "DM Sans", "sans-serif";
-  }
-  .tablem td {
-  text-transform: capitalize;
-  text-align: center;
-  font-family: "DM Sans", "sans-serif";
-  width: calc(100%/3);
-  }
-  .tablem button {
-  display: block;
-  width: 80%;
-  font-family: "DM Sans", "sans-serif";
-  font-weight: bold;
-  margin: 1vh auto;
-  padding: 1.5vh 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  }
-  .tablem .categoria-td {
-  border-bottom: solid black 2px;
-  border-top: solid black 2px;
-  font-weight: bold;
-  padding: 1vh 0;
-  text-transform: uppercase;
-  }
-
-
-body.dark-mode #nuevo-plato-form {
-position: relative;
-border: solid white 2px;
-width: 50%;
-margin: 5vh auto;
-padding: 2vh 2vw;
-flex-direction: column;
-border-radius: 15px;
-}
-  body.dark-mode #nuevo-plato-form label {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2vh;
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
-  font-family: "DM Sans", "sans-serif";
-  }
-  body.dark-mode #nuevo-plato-form input {
-  display: block;
-  width: calc(100%/3.5);
-  margin: 5vh 1vw;
-  padding: 0.5vh 0;
-  outline: none;
-  border: none;
-  border-bottom: solid white 2px;
-  float: left;
-  font-family: "DM Sans", "sans-serif";
-  color: white;
-  }
-  body.dark-mode #nuevo-plato-form select {
-  display: block;
-  width: calc(100%/3.5);
-  margin: 5vh 1vw;
-  padding: 0.5vh 0;
-  outline: none;
-  border: none;
-  border: solid white 2px;
-  border-radius: 15px;
-  float: left;
-  background-color: transparent;
-  cursor: pointer;
-  color: white;
-  font-family: "DM Sans", "sans-serif";  
-  }
-  body.dark-mode #nuevo-plato-form option {
-  background-color: black;
-  font-family: "DM Sans", "sans-serif";  
-  }
-  body.dark-mode #nuevo-plato-form button {
-  display: block;
-  width: 100%;
-  font-family: "DM Sans", "sans-serif";
-  font-weight: bold;
-  margin: 1vh auto;
-  padding: 2vh 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  }
-
-body.dark-mode .tablem {
-border: solid white 2px;
-width: 90%;
-margin: 0 auto;
-border-radius: 15px;
-}
-  body.dark-mode .tablem th {
-  padding: 2.5vh 0;
-  color: white;
-  font-family: "DM Sans", "sans-serif";
-  }
-  body.dark-mode .tablem td {
-  text-transform: capitalize;
-  text-align: center;
-  color: white;
-  font-family: "DM Sans", "sans-serif";
-  }
-  body.dark-mode .tablem button {
-  display: block;
-  width: 80%;
-  font-family: "DM Sans", "sans-serif";
-  font-weight: bold;
-  margin: 1vh auto;
-  padding: 1.5vh 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  }
-  body.dark-mode .tablem .categoria-td {
-  border-bottom: solid white 2px;
-  border-top: solid white 2px;
-  font-weight: bold;
-  padding: 1vh 0;
-  text-transform: uppercase;
-  }

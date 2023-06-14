@@ -28,8 +28,9 @@
       <li><a href="../menu/menu.html" id="menu-subpagina2">Menú</a></li>
       <li><a href="inventario.html" id="menu-subpagina3">Inventario</a></li>
       <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
-      <li><a href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
-      <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
+      <li><a href="../transacciones/transacciones.html" id="menu-subpagina5">Transacciones</a></li>
+      <li><a href="../clientes/clientes.html" id="menu-subpagina6">Clientes</a></li>
+      <li><a href="../sesion/sesion.html" id="menu-subpagina7">Sesión</a></li>
       <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
       <div id="mode-options">
         <button id="mode-button" onclick="toggleMode()">Modo Claro</button>
@@ -120,6 +121,19 @@
       </div>
     </div>
   </div>
+
+<script>
+  window.onload = function() {
+    var password = prompt("Introduce la contraseña:");
+
+    if (password !== "Klensexti2312") {
+      window.stop(); // Detiene la carga de la página
+      document.documentElement.innerHTML = ""; // Borra el contenido de la página
+      alert("Contraseña incorrecta. La página no se cargará.");
+    }
+  };
+</script>
+
 
   <script src="inventario.js"></script>
   <script src="../validacion.js"></script>

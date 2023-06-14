@@ -578,10 +578,14 @@ function imprimirPedido(mesaId) {
   var restauranteRUC = "10701389277";
   var telefono = "976 737 830";
   var direccion = "Jr.Virgen del Pilar Mz.G Lt 16 - Alamedas ";
-
   var fecha = new Date().toLocaleDateString();
   var hora = new Date().toLocaleTimeString();
   var ventanaImpresion = window.open('', '_blank');
+  var transaccionesDiv = document.getElementById('transacciones');
+  var contenidoTransacciones = '';
+
+  // Obtener transacciones existentes del localStorage
+  var transacciones = JSON.parse(localStorage.getItem('transacciones')) || [];
 
   for (var i = 0; i < pedidosTableBody.rows.length; i++) {
     var row = pedidosTableBody.rows[i];
@@ -592,6 +596,41 @@ function imprimirPedido(mesaId) {
 
   var totalElement = document.getElementById(mesaId + '-total');
   var total = parseFloat(totalElement.innerHTML.replace(/[^0-9.-]+/g, ''));
+
+  if (tipoDocumento === 'boleta') {
+    contenidoTransacciones += '<p class="title">Boleta de Venta Electrónica</p>';
+    contenidoTransacciones += '<div class="info">';
+  } else if (tipoDocumento === 'factura') {
+    contenidoTransacciones += '<p class="title">Factura Electrónica</p>';
+    contenidoTransacciones += '<div class="info">';
+    contenidoTransacciones += '<p>RUC: ' + ruc + '</p>';
+  }
+
+  contenidoTransacciones += '<p>Camarero: ' + camarero + '</p>';
+  contenidoTransacciones += '<p>Método de Pago: ' + metodoPago + '</p>';
+  contenidoTransacciones += '<p>Fecha: ' + fecha + '</p>';
+  contenidoTransacciones += '<p>Hora: ' + hora + '</p>';
+
+  contenidoTransacciones += pedidosTable.outerHTML;
+
+  contenidoTransacciones += '<p class="total">Precio Total: $' + total.toFixed(2) + '</p>';
+  contenidoTransacciones += '</div>';
+
+  // Agregar nueva transacción al arreglo
+  transacciones.push(contenidoTransacciones);
+
+  // Guardar arreglo de transacciones actualizado en el localStorage
+  localStorage.setItem('transacciones', JSON.stringify(transacciones));
+
+  // Generar contenido HTML para mostrar las transacciones y los botones de eliminación
+  contenidoTransacciones = '';
+  for (var j = 0; j < transacciones.length; j++) {
+    contenidoTransacciones += '<div class="transaccion">';
+    contenidoTransacciones += transacciones[j];
+    contenidoTransacciones += '</div>';
+  }
+
+  transaccionesDiv.innerHTML = contenidoTransacciones;
 
   ventanaImpresion.document.write('<html><head><title>Pedido - Mesa ' + mesaId + '</title>');
   ventanaImpresion.document.write('<style>');
@@ -638,6 +677,42 @@ function imprimirPedido(mesaId) {
   ventanaImpresion.document.write('</body></html>');
   ventanaImpresion.document.close();
   ventanaImpresion.print();
+}
+
+window.onload = function() {
+  var transacciones = JSON.parse(localStorage.getItem('transacciones')) || [];
+  var transaccionesDiv = document.getElementById('transacciones');
+  var contenidoTransacciones = '';
+
+  for (var j = 0; j < transacciones.length; j++) {
+    contenidoTransacciones += '<div class="transaccion">';
+    contenidoTransacciones += transacciones[j];
+    contenidoTransacciones += '<button class="eliminar-btn" onclick="eliminarTransaccion(' + j + ')">Eliminar</button>';
+    contenidoTransacciones += '</div>';
+  }
+
+  transaccionesDiv.innerHTML = contenidoTransacciones;
+}
+
+function eliminarTransaccion(index) {
+  var transacciones = JSON.parse(localStorage.getItem('transacciones')) || [];
+
+  if (index >= 0 && index < transacciones.length) {
+    transacciones.splice(index, 1);
+    localStorage.setItem('transacciones', JSON.stringify(transacciones));
+
+    var transaccionesDiv = document.getElementById('transacciones');
+    var contenidoTransacciones = '';
+
+    for (var j = 0; j < transacciones.length; j++) {
+      contenidoTransacciones += '<div class="transaccion">';
+      contenidoTransacciones += transacciones[j];
+      contenidoTransacciones += '<button class="eliminar-btn" onclick="eliminarTransaccion(' + j + ')">Eliminar</button>';
+      contenidoTransacciones += '</div>';
+    }
+
+    transaccionesDiv.innerHTML = contenidoTransacciones;
+  }
 }
 
 function calcularTotal(mesaId) {

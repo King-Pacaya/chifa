@@ -8,7 +8,14 @@ body {
 background-color: white;
 transition: 0.3s ease;
 }
-
+body::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
 .tab {
 display: none;
 }
@@ -201,7 +208,14 @@ body.dark-mode {
 background-color: black;
 transition: 0.3s ease;
 }
-
+body.dark-mode::-webkit-scrollbar {
+width: 6px;
+background: transparent;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 15px;
+}
 body.dark-mode h1 {
 position: relative;
 width: 100%;

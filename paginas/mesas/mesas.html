@@ -28,8 +28,9 @@
       <li><a href="../menu/menu.html" id="menu-subpagina2">Menú</a></li>
       <li><a href="../inventario/inventario.html" id="menu-subpagina3">Inventario</a></li>
       <li><a href="../promociones/promociones.html" id="menu-subpagina4">Promociones</a></li>
-      <li><a href="../clientes/clientes.html" id="menu-subpagina5">Clientes</a></li>
-      <li><a href="../sesion/sesion.html" id="menu-subpagina6">Sesión</a></li>
+      <li><a href="../transacciones/transacciones.html" id="menu-subpagina5">Transacciones</a></li>
+      <li><a href="../clientes/clientes.html" id="menu-subpagina6">Clientes</a></li>
+      <li><a href="../sesion/sesion.html" id="menu-subpagina7">Sesión</a></li>
       <li><a href="../../login.html" onclick="cerrarSesion()">Cerrar Sesión</a></li>
       <div id="mode-options">
         <button id="mode-button" onclick="toggleMode()">Modo Claro</button>
@@ -88,7 +89,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa1')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa1')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa1', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa1')">Cerrar</button>
       </div>
     <table id="mesa1-pedidos" class="pedido-table">
@@ -156,7 +157,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa2')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa2')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa2', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa2')">Cerrar</button>
       </div>
     <table id="mesa2-pedidos" class="pedido-table">
@@ -224,7 +225,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa3')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa3')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa3', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa3')">Cerrar</button>
       </div>
     <table id="mesa3-pedidos" class="pedido-table">
@@ -292,7 +293,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa4')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa4')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa4', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa4')">Cerrar</button>
       </div>
     <table id="mesa4-pedidos" class="pedido-table">
@@ -360,7 +361,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa5')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa5')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa5', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa5')">Cerrar</button>
       </div>
     <table id="mesa5-pedidos" class="pedido-table">
@@ -428,7 +429,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa6')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa6')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa6', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa6')">Cerrar</button>
       </div>
     <table id="mesa6-pedidos" class="pedido-table">
@@ -496,7 +497,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa7')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa7')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa7', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa7')">Cerrar</button>
       </div>
     <table id="mesa7-pedidos" class="pedido-table">
@@ -564,7 +565,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa8')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa8')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa8', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa8')">Cerrar</button>
       </div>
     <table id="mesa8-pedidos" class="pedido-table">
@@ -632,7 +633,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa9')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa9')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa9', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa9')">Cerrar</button>
       </div>
     <table id="mesa9-pedidos" class="pedido-table">
@@ -700,7 +701,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa10')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa10')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa10', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa10')">Cerrar</button>
       </div>
     <table id="mesa10-pedidos" class="pedido-table">
@@ -768,7 +769,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa11')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa11')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa11', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa11')">Cerrar</button>
       </div>
     <table id="mesa11-pedidos" class="pedido-table">
@@ -836,7 +837,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa12')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa12')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa12', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa12')">Cerrar</button>
       </div>
     <table id="mesa12-pedidos" class="pedido-table">
@@ -904,7 +905,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa13')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa13')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa13', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa13')">Cerrar</button>
       </div>
     <table id="mesa13-pedidos" class="pedido-table">
@@ -972,7 +973,7 @@
 
       <div class="modal-button">
         <button type="button" onclick="limpiarPedidos('mesa14')">Limpiar</button>
-        <button type="button" onclick="imprimirPedido('mesa14')">Imprimir</button>
+        <button type="button" onclick="imprimirPedido('mesa14', 'transacciones')">Imprimir</button>
         <button type="button" onclick="closeModal('mesa14')">Cerrar</button>
       </div>
     <table id="mesa14-pedidos" class="pedido-table">
@@ -1048,6 +1049,7 @@
     </div>
   </div>
 
+<div id="transacciones"></div>
 
 <form id="nuevo-plato-form">
   <label>Ingresa un nuevo plato o bebida:</label>
@@ -1076,8 +1078,6 @@
   </select>
   <button type="submit">Agregar plato</button>
 </form>
-
-
 <table class="tablem">
   <thead>
     <tr>
