@@ -20,10 +20,21 @@ font-family: "DM Sans", "sans-serif";
 .form {
 font-family: "DM Sans", "sans-serif";
 }
-.form label, .form input, .form button {
+.form label, .form input, .form button, .form select {
 display: block;
 width: 20%;
 font-family: "DM Sans", "sans-serif";
+}
+.form select {
+margin: 1vh 0 4vh 0;
+border: solid black 2px;
+outline: none;
+border-radius: 15px;
+cursor: pointer;
+background-color: transparent;
+}
+.form option {
+cursor: pointer;
 }
 .form input {
 margin: 1vh 0 4vh 0;
@@ -100,11 +111,23 @@ font-family: "DM Sans", "sans-serif";
 color: white;
 }
 
-body.dark-mode .form label, body.dark-mode .form input, body.dark-mode .form button {
+body.dark-mode .form label, body.dark-mode .form input, body.dark-mode .form button, body.dark-mode .form select {
 display: block;
 width: 20%;
 font-family: "DM Sans", "sans-serif";
 color: white;
+}
+body.dark-mode .form select {
+margin: 1vh 0 4vh 0;
+border: solid white 2px;
+outline: none;
+border-radius: 15px;
+cursor: pointer;
+background-color: transparent;
+}
+body.dark-mode .form option {
+background-color: black;
+cursor: pointer;
 }
 body.dark-mode .form input {
 margin: 1vh 0 4vh 0;

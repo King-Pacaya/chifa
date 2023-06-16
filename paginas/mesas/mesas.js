@@ -735,24 +735,32 @@ function aplicarPromocion(mesaId) {
 
   var codigosGuardados = JSON.parse(localStorage.getItem('codigosPromocionales')) || [];
   var descuento = null;
+  var tipoDescuento = null;
 
-  // Buscar el descuento del código promocional en la lista de códigos guardados
+  // Buscar el descuento y el tipo del código promocional en la lista de códigos guardados
   for (var i = 0; i < codigosGuardados.length; i++) {
     if (codigosGuardados[i].codigo === codigo) {
       descuento = codigosGuardados[i].descuento;
+      tipoDescuento = codigosGuardados[i].tipo;
       break;
     }
   }
 
-  if (descuento !== null) {
+  if (descuento !== null && tipoDescuento !== null) {
     var totalElement = document.getElementById(mesaId + '-total');
     var total = parseFloat(totalElement.innerHTML.replace(/[^0-9.-]+/g, ''));
 
     if (total > 50) {
-      var descuentoTotal = total * descuento / 100;
-      total -= descuentoTotal;
+      if (tipoDescuento === 'porcentaje') {
+        var descuentoTotal = total * descuento;
+        total -= descuentoTotal;
+      } else if (tipoDescuento === 'cantidad') {
+        total -= descuento;
+        alert('Descuento aplicado: $' + descuento);
+      }
+
       totalElement.innerHTML = '$' + total.toFixed(2);
-      alert('Descuento aplicado: $' + descuentoTotal.toFixed(2));
+      alert('Descuento aplicado: %' + descuento * 100);
     } else {
       alert('El total debe ser mayor a $50 para aplicar el descuento');
     }
@@ -762,6 +770,7 @@ function aplicarPromocion(mesaId) {
 
   codigoInput.value = ''; // Limpiar el input del código promocional
 }
+
 
 // Función para guardar la lista de platos en localStorage
 function guardarPlatosEnLocalStorage() {

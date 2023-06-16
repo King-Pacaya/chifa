@@ -37,13 +37,20 @@
   </div>
 
   <h2>Guardar código promocional:</h2>
-  <div class="form">
-    <label for="nuevo-codigo-promocional">Nuevo código promocional:</label>
-    <input type="text" id="nuevo-codigo-promocional" placeholder="Ingrese un código">
-    <label for="nuevo-descuento-promocional">Descuento:</label>
-    <input type="number" id="nuevo-descuento-promocional" placeholder="Ingrese el descuento" onkeydown="if(event.keyCode===13) { guardarCodigoPromocional(); }">
-    <button type="button" onclick="guardarCodigoPromocional()">Guardar</button>
-  </div>
+  <form action="javascript:void(0)">
+    <div class="form">
+      <label for="nuevo-codigo-promocional">Nuevo código promocional:</label>
+      <input type="text" id="nuevo-codigo-promocional" placeholder="Ingrese un código">
+      <label for="nuevo-descuento-promocional">Descuento:</label>
+      <input type="number" id="nuevo-descuento-promocional" placeholder="Ingrese el descuento" onkeydown="if(event.keyCode===13) { guardarCodigoPromocional(); }">
+      <label for="tipo-descuento-promocional">Tipo de descuento:</label>
+      <select id="tipo-descuento-promocional">
+        <option value="porcentaje">Porcentaje</option>
+        <option value="cantidad">Cantidad</option>
+      </select>
+      <button type="button" onclick="guardarCodigoPromocional()">Guardar</button>
+    </div>
+  </form>
 
   <h2>Códigos promocionales guardados:</h2>
   <ul id="codigos-guardados"></ul>
@@ -53,5 +60,4 @@
   <script src="../menu.js"></script>
   <script src="../mode.js"></script>
 </body>
-
 </html>

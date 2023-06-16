@@ -1,28 +1,34 @@
-    var promociones = {
-      "PROMO1": 0.1,  // Descuento del 10% para la mesa 1
-      "PROMO2": 0.2,  // Descuento del 20% para la mesa 2
-      // Agrega más códigos promocionales y sus descuentos aquí
-    };
+var promociones = {
+  "PROMO1": 0.1,  // Descuento del 10% para la mesa 1
+  "PROMO2": 0.2,  // Descuento del 20% para la mesa 2
+  // Agrega más códigos promocionales y sus descuentos aquí
+};
 
 function guardarCodigoPromocional() {
   var codigoInput = document.getElementById('nuevo-codigo-promocional');
   var descuentoInput = document.getElementById('nuevo-descuento-promocional');
+  var tipoDescuentoInput = document.getElementById('tipo-descuento-promocional');
   var codigo = codigoInput.value.toUpperCase();
   var descuento = parseFloat(descuentoInput.value);
+  var tipoDescuento = tipoDescuentoInput.value;
 
   if (codigo.trim() !== '' && !isNaN(descuento) && descuento >= 0 && descuento <= 100) {
+    if (tipoDescuento === 'porcentaje') {
+      descuento = descuento / 100; // Convertir el descuento de porcentaje a decimal
+    }
+
     promociones[codigo] = descuento;
     var codigosGuardados = JSON.parse(localStorage.getItem('codigosPromocionales')) || [];
-    codigosGuardados.push({ codigo: codigo, descuento: descuento });
+    codigosGuardados.push({ codigo: codigo, descuento: descuento, tipo: tipoDescuento });
     localStorage.setItem('codigosPromocionales', JSON.stringify(codigosGuardados));
 
     // Actualizar la lista de códigos promocionales guardados
     mostrarCodigosGuardados();
 
-        codigoInput.value = ''; // Limpiar el input del código promocional
+    codigoInput.value = ''; // Limpiar el input del código promocional
     descuentoInput.value = ''; // Limpiar el input del descuento promocional
   } else {
-    alert('Ingrese un código promocional válido y un descuento entre 0 y 100');
+    alert('Ingrese un código promocional válido, un descuento entre 0 y 100, y seleccione un tipo de descuento.');
   }
 }
 
@@ -34,6 +40,7 @@ function mostrarCodigosGuardados() {
   for (var i = 0; i < codigosGuardados.length; i++) {
     var codigo = codigosGuardados[i].codigo;
     var descuento = codigosGuardados[i].descuento;
+    var tipoDescuento = codigosGuardados[i].tipo;
 
     var li = document.createElement('li');
     var spanCodigo = document.createElement('span');
@@ -43,7 +50,9 @@ function mostrarCodigosGuardados() {
 
     var spanDescuento = document.createElement('span');
     spanDescuento.classList.add('descuento');
-    spanDescuento.innerHTML = ' Descuento: <span class="porcentaje-descuento">' + descuento + '%</span> ';
+
+    var descuentoTexto = tipoDescuento === 'porcentaje' ? descuento * 100 + '%' : '$' + descuento;
+    spanDescuento.innerHTML = ' Descuento: <span class="descuento-valor">' + descuentoTexto + '</span> ';
     li.appendChild(spanDescuento);
 
     var botonEliminar = document.createElement('button');
@@ -62,8 +71,6 @@ function mostrarCodigosGuardados() {
 
 // Llamar a la función mostrarCodigosGuardados al cargar la página
 mostrarCodigosGuardados();
-
-
 
 function eliminarCodigoPromocional(codigo) {
   var codigosGuardados = JSON.parse(localStorage.getItem('codigosPromocionales')) || [];
