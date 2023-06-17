@@ -574,7 +574,7 @@ function imprimirPedido(mesaId) {
   var tipoDocumento = tipoDocumentoSelect.value;
   var rucInput = document.getElementById('ruc-' + mesaId);
   var ruc = rucInput.value;
-  var restauranteNombre = "Chifa Restaurant WUANG CHOY";
+  var restauranteNombre = "Chifa Restaurant Wonchoe";
   var restauranteRUC = "10701389277";
   var telefono = "976 737 830";
   var direccion = "Jr.Virgen del Pilar Mz.G Lt 16 - Alamedas ";

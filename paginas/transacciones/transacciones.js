@@ -131,7 +131,7 @@ window.onload = function() {
 
   var password = prompt("Introduce la contraseña:");
 
-  if (password !== "Klensexti2312") {
+  if (password !== "123") {
     window.stop(); // Detiene la carga de la página
     document.documentElement.innerHTML = ""; // Borra el contenido de la página
     alert("Contraseña incorrecta. La página no se cargará.");

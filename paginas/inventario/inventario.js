@@ -89,7 +89,7 @@ formProducto.forEach(function(form) {
       reader.readAsDataURL(imagen);
     } else {
       // No se ha seleccionado una imagen, asignar una imagen predeterminada
-      producto.imagen = '../../multimedia/logo.png';
+      producto.imagen = '../../multimedia/favicon.png';
       // Agregar el nuevo producto a la lista
       productos.push(producto);
       // Guardar la lista de productos en el almacenamiento local
